@@ -5,9 +5,6 @@ class CreateTunnels < ActiveRecord::Migration[6.0]
       t.string :location
       t.string :description
       t.string :image
-      t.string :link
-
-      t.timestamps
     end
   end
 end

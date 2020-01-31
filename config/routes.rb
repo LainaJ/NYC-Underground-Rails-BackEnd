@@ -1,21 +1,14 @@
 Rails.application.routes.draw do
-  get 'tunnels/index'
-  get 'tunnels/create'
-  get 'tunnels/new'
-  get 'tunnels/show'
-  get 'tunnels/edit'
-  get 'tunnels/update'
-  get 'tunnels/delete'
-  
-  get 'users/index'
-  get 'users/create'
-  get 'users/new'
-  get 'users/show'
-  get 'users/edit'
-  get 'users/update'
-  get 'users/delete'
+  # get '/tunnels', to: 'api/v1/tunnels#index'
+
+  namespace :api do
+      namespace :v1 do
+        resources :tunnels
+      end
+    end 
 
 
-  # need to edit later with react routes
+  # the get the client types in 
+  #the to is where it goes to look to see what method to act on
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
